@@ -5,7 +5,11 @@
 A [Claude Code](https://claude.com/claude-code) **skill** that turns any image into an animated desktop pet — a transparent, always-on-top, draggable little character that lives on your desktop, breathes, wanders, falls with gravity when you toss it, and reacts when you click it.
 
 <p align="center"><i>Give it a picture, get a living desktop pet.</i></p>
-[Uploading Screencast from 2026-08-09 18-12-30.webm…]()
+
+
+Uploading Screencast from 2026-08-09 18-12-30 (Copy).mp4…
+
+
 
 ---
 
