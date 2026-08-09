@@ -7,8 +7,6 @@ A [Claude Code](https://claude.com/claude-code) **skill** that turns any image i
 <p align="center"><i>Give it a picture, get a living desktop pet.</i></p>
 
 
-Uploading Screencast from 2026-08-09 18-12-30 (Copy).mp4…
-
 
 
 ---
