@@ -1,8 +1,10 @@
 # desktop-pet
 
+**English** | [Chinese](README.zh-CN.md)
+
 A [Claude Code](https://claude.com/claude-code) **skill** that turns any image into an animated desktop pet — a transparent, always-on-top, draggable little character that lives on your desktop, breathes, wanders, falls with gravity when you toss it, and reacts when you click it.
 
-<p align="center"><i>Give it a picture → get a living desktop pet.</i></p>
+<p align="center"><i>Give it a picture, get a living desktop pet.</i></p>
 
 ---
 
@@ -18,7 +20,7 @@ your image ──► [cutout: rembg / ImageMagick] ──► transparent pet.png
                                   self-contained, runnable  my-pet/  folder
 ```
 
-- **Two runtimes.** A web-based [Electron](https://www.electronjs.org/) pet (richest animation, cross-platform) **or** a native [PyQt6](https://www.riverbankcomputing.com/software/pyqt/) pet (light, native on GNOME/Wayland). `auto` picks PyQt6 if it's already installed, else Electron.
+- **Two runtimes.** A web-based [Electron](https://www.electronjs.org/) pet (richest animation, cross-platform) **or** a native [PyQt6](https://www.riverbankcomputing.com/software/pyqt/) pet (light, native on GNOME/Wayland). `auto` picks PyQt6 if it is already installed, otherwise Electron.
 - **Smart animation.** With just one image, the pet is animated procedurally (breathing, walking, squash-and-stretch, gravity, shadow, speech bubbles). If you have image generation available, the skill can produce idle/walk sprite strips for true frame-by-frame animation (Shimeji-style).
 - **Graceful dependencies.** Nothing is required up front. `rembg`, `PyQt6`, and `electron` are installed lazily, with fallbacks, so cloning the repo just works.
 
@@ -28,7 +30,7 @@ your image ──► [cutout: rembg / ImageMagick] ──► transparent pet.png
 git clone <this-repo> ~/.claude/skills/desktop-pet
 ```
 
-Then in Claude Code, just describe what you want — e.g. *“用 cat.png 做一个桌面宠物”* — and the skill takes over. Or call the generator directly:
+Then in Claude Code, just describe what you want — for example, *"Turn cat.png into a desktop pet"* — and the skill takes over. Or call the generator directly:
 
 ```bash
 node ~/.claude/skills/desktop-pet/scripts/generate.mjs cat.png --name kitty
@@ -80,12 +82,12 @@ The pet appears at the bottom-center of your screen.
 
 ## Requirements (all optional / lazy)
 
-| Capability  | Tool                    | When it's used                          |
-|-------------|-------------------------|-----------------------------------------|
-| Background removal | `rembg` (pip)    | best-quality cutout (fallback: ImageMagick) |
-| Image ops   | ImageMagick (`convert`/`montage`) | cutout fallback + sprite sheet assembly |
-| Electron pet | Node.js + npm          | `--runtime electron` (default if no PyQt6) |
-| PyQt6 pet   | Python 3.9+            | `--runtime pyqt`                        |
+| Capability         | Tool                              | When it's used                              |
+|--------------------|-----------------------------------|---------------------------------------------|
+| Background removal | `rembg` (pip)                     | best-quality cutout (fallback: ImageMagick) |
+| Image ops          | ImageMagick (`convert`/`montage`) | cutout fallback + sprite sheet assembly     |
+| Electron pet       | Node.js + npm                     | `--runtime electron` (default if no PyQt6)  |
+| PyQt6 pet          | Python 3.9+                       | `--runtime pyqt`                            |
 
 > **Ubuntu / Debian tip:** stock installs have no `pip` (PEP 668). For the PyQt6 pet, install Qt once with `sudo apt install python3-pyqt6` — the generated `run.sh` detects a missing PyQt6/pip/venv and prints this same hint.
 
@@ -104,6 +106,10 @@ desktop-pet/
 ├── templates/pyqt/          # PyQt6 pet template
 └── references/              # behaviors.md, animations.md (extend / tune)
 ```
+
+## Roadmap
+
+Planned enhancements (sleep/climb states, tray icon, autostart, multi-monitor, tests, …) live in [ROADMAP.md](ROADMAP.md).
 
 ## License
 
